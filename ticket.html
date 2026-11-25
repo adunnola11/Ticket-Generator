@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ticket - TechSummit 2026</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+    <nav class="navbar" aria-label="Main navigation">
+
+        <a href="index.html#home" class="logo">
+            TechSummit<span>2026</span>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+
+    <!-- Generated Ticket -->
+    <section class="ticket-section" id="ticketSection" hidden>
+        <h2>Your Conference Ticket</h2>
+
+        <article class="ticket-card" aria-label="Generated conference ticket">
+
+            <div class="ticket-top">
+                <div>
+                    <h3>TechSummit <span>2026</span></h3>
+                    <p>CONFERENCE PASS</p>
+                </div>
+
+                <span class="ticket-badge" id="displayType"></span>
+            </div>
+
+            <div class="ticket-details">
+
+                <img id="displayAvatar"
+                     class="ticket-avatar"
+                     alt="Attendee profile photograph"
+                     hidden>
+
+                <p>ATTENDEE NAME</p>
+                <h2 id="displayName"></h2>
+
+                <p>EMAIL ADDRESS</p>
+                <h3 id="displayEmail"></h3>
+
+                <div class="ticket-info">
+                    <div>
+                        <p>DATE</p>
+                        <strong>DEC 12, 2026</strong>
+                    </div>
+
+                    <div>
+                        <p>LOCATION</p>
+                        <strong>LAGOS, NIGERIA</strong>
+                    </div>
+                </div>
+
+                <p>REGISTRATION ID</p>
+                <h3 id="displayId"></h3>
+
+                <p>TICKET PRICE</p>
+                <h3 id="displayPrice"></h3>
+
+                <div class="qr-container">
+                    <div id="qrcode"
+                         aria-label="Ticket verification QR code"></div>
+                    <p>SCAN TO VERIFY TICKET</p>
+                </div>
+
+            </div>
+
+            <div class="ticket-bottom">
+                <p>THANK YOU FOR REGISTERING!</p>
+            </div>
+
+        </article>
+
+        <!-- Ticket Actions -->
+        <div class="ticket-actions">
+
+            <p id="pdfStatus" role="status"
+               aria-live="polite"></p>
+
+            <button type="button" id="downloadPDF" class="primary-btn">
+                Download PDF
+            </button>
+
+            <button type="button" id="printTicket" class="summit-btn">
+                Print Ticket
+            </button>
+
+        </div>
+    </section>
+
+    <p id="noTicketMessage" hidden>
+        No ticket found. Please register to generate your conference ticket.
+        <a href="register.html">Register here</a>.
+    </p>
+
+    <!-- QR Code Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<!-- HTML to Canvas Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<!-- PDF Generation Library -->
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
